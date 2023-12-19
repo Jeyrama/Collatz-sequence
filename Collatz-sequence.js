@@ -29,3 +29,16 @@ function collatz(n) {
 }
 
 // or
+
+function collatz(n) {
+  let arr = [n]
+  while (n>1) {
+    if (n%2==0) {
+      n = n/2
+    } else {
+      n = 3*n+1
+    }
+    arr.push(n)
+  }
+  return arr.join('->')
+}
